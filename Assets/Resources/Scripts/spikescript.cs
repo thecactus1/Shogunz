@@ -25,8 +25,7 @@ public class spikescript : MonoBehaviour {
 		enemy = GameObject.FindGameObjectsWithTag ("Enemy");
 		for (int i = 0; i < enemy.Length; ++i) {
 
-			if (GetComponent<PolygonCollider2D> ().IsTouching (enemy [i].GetComponent<BoxCollider2D> ())) {
-                Physics2D.IgnoreCollision(enemy[i].GetComponent<Collider2D>(), GetComponent<BoxCollider2D>());
+			if (GetComponent<PolygonCollider2D> ().IsTouching (enemy [i].GetComponent<Collider2D> ())) {
                 EnemyController enemyclass = enemy [i].GetComponent<EnemyController> ();
 				enemyclass.Kill ();
 			}

@@ -497,7 +497,7 @@ public class PController: MonoBehaviour {
     void Jumpinput()
     {
 
-        if ((walls["Right"].bounds == true || walls["Left"].bounds == true) && wallrun==true && inputs["Up"].down==true)
+        if ((walls["Right"].bounds == true || walls["Left"].bounds == true) && wallrun==true && inputs["Up"].down==true && inputs["Jump"].isPressed == true)
         {
             Wallrun();
             return;
